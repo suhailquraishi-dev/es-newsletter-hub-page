@@ -352,7 +352,7 @@ body.newsletter-hub-page {
   box-sizing: border-box;
   background: #fff;
   border: 0;
-  border-radius: 12px;
+  border-radius: 6px;
   box-shadow: 0 1px 4px rgba(16, 24, 40, .08);
   transition: box-shadow 150ms ease;
 }
@@ -386,7 +386,7 @@ body.newsletter-hub-page {
   padding: 10px 20px;
   box-sizing: border-box;
   border: 0;
-  border-radius: 12px;
+  border-radius: 6px;
   background: var(--nl-subscribe-bg);
   color: #fff;
   cursor: pointer;
