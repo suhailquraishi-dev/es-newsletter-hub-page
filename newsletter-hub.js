@@ -6,14 +6,14 @@
   // Break Point has no dedicated banner yet, so it falls back to the shared
   // The Huddle artwork (matches the Figma source, which reused that frame
   // for every card before per-newsletter banners existed).
-  const FALLBACK_ART = 'newsletter-brand-assets/the-huddle-artwork.webp';
+  const FALLBACK_ART = 'newsletter-brand-assets/the-huddle-artwork.jpg';
 
   const NEWSLETTERS = [
-    { id: 'the-huddle', name: 'The Huddle', selected: false, art: 'newsletter-brand-assets/the-huddle-artwork.webp' },
-    { id: 'essentially-w', name: 'Essentially W', selected: false, art: 'newsletter-brand-assets/essentially-w-artwork.webp' },
-    { id: 'essentially-dugout', name: 'Essentially Dugout', selected: false, art: 'newsletter-brand-assets/essentially-dugout-artwork.webp' },
-    { id: 'essentially-golf', name: 'Essentially Golf', selected: false, art: 'newsletter-brand-assets/essentially-golf-artwork.webp' },
-    { id: 'lucky-dog-on-track', name: 'Lucky Dog On Track', selected: false, art: 'newsletter-brand-assets/lucky-dog-on-track-artwork.webp' },
+    { id: 'the-huddle', name: 'The Huddle', selected: false, art: 'newsletter-brand-assets/the-huddle-artwork.jpg' },
+    { id: 'essentially-w', name: 'Essentially W', selected: false, art: 'newsletter-brand-assets/essentially-w-artwork.jpg' },
+    { id: 'essentially-dugout', name: 'Essentially Dugout', selected: false, art: 'newsletter-brand-assets/essentially-dugout-artwork.jpg' },
+    { id: 'essentially-golf', name: 'Essentially Golf', selected: false, art: 'newsletter-brand-assets/essentially-golf-artwork.jpg' },
+    { id: 'lucky-dog-on-track', name: 'Lucky Dog On Track', selected: false, art: 'newsletter-brand-assets/lucky-dog-on-track-artwork.jpg' },
     { id: 'break-point', name: 'Break Point', selected: false, art: FALLBACK_ART },
   ];
 
