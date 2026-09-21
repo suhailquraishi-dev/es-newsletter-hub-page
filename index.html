@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sign up for EssentiallySports' free newsletters covering the NFL, golf, tennis, horse racing, and more.">
+<title>Newsletter Hub | EssentiallySports</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site-chrome.css">
+<link rel="stylesheet" href="site-mobile-chrome.css">
+<link rel="stylesheet" href="newsletter-hub.css">
+</head>
+<body class="newsletter-hub-page">
+
+<nav class="navbar" aria-label="Global navigation">
+  <a class="navbar-logo" href="https://www.essentiallysports.com/" aria-label="EssentiallySports home">
+    <img src="brand-logo-blue.svg" alt="EssentiallySports">
+  </a>
+  <div class="navbar-menu">
+    <a href="https://www.essentiallysports.com/latest-news/">Latest</a>
+    <div class="nav-dropdown">
+      <a class="nav-trigger has-chevron" href="https://www.essentiallysports.com/category/nfl/" aria-haspopup="true" aria-expanded="false">Sports</a>
+      <div class="nav-dropdown-menu" role="menu" aria-label="Sports">
+        <a href="https://www.essentiallysports.com/category/nfl/" role="menuitem">All News</a>
+        <a href="https://www.essentiallysports.com/category/college-football/" role="menuitem">College Football</a>
+        <a href="https://www.essentiallysports.com/category/college-basketball/" role="menuitem">College Basketball</a>
+        <a href="https://www.essentiallysports.com/category/golf/" role="menuitem">Golf</a>
+        <a href="https://www.essentiallysports.com/category/tennis/" role="menuitem">Tennis</a>
+        <a href="https://www.essentiallysports.com/category/boxing/" role="menuitem">Boxing</a>
+        <a href="https://www.essentiallysports.com/category/nba/" role="menuitem">NBA</a>
+        <a href="https://www.essentiallysports.com/category/nascar/" role="menuitem">NASCAR</a>
+        <a href="https://www.essentiallysports.com/category/olympics/" role="menuitem">Olympics</a>
+        <a href="https://www.essentiallysports.com/category/ufc/" role="menuitem">UFC</a>
+        <a href="https://www.essentiallysports.com/category/wnba/" role="menuitem">WNBA</a>
+        <a href="https://www.essentiallysports.com/category/baseball/" role="menuitem">MLB</a>
+      </div>
+    </div>
+    <a href="https://www.essentiallysports.com/newsletter-hub/" aria-current="page">Newsletters</a>
+    <a href="https://www.essentiallysports.com/think-tank/">Think Tank</a>
+    <div class="nav-dropdown">
+      <a class="nav-trigger has-chevron" href="https://case-study.essentiallysports.com/" aria-haspopup="true" aria-expanded="false">Case Studies</a>
+      <div class="nav-dropdown-menu" role="menu" aria-label="Case Studies">
+        <a href="https://case-study.essentiallysports.com/" role="menuitem">Dude Wipes</a>
+        <a href="https://www.essentiallysports.com/wnba-all-star-2025-event/" role="menuitem">WNBA Allstars</a>
+        <a href="https://www.essentiallysports.com/us-open-2025/" role="menuitem">US Open Event</a>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-right">
+    <a class="navbar-icon-btn" href="https://www.facebook.com/essentiallysports" title="Facebook" aria-label="Facebook"><img src="social-icons/nav-facebook.svg" alt=""></a>
+    <a class="navbar-icon-btn" href="https://twitter.com/es_sportsnews" title="X" aria-label="X"><img src="social-icons/nav-x.svg" alt=""></a>
+    <a class="navbar-icon-btn" href="https://www.linkedin.com/company/essentiallysports" title="LinkedIn" aria-label="LinkedIn"><img src="social-icons/nav-linkedin.svg" alt=""></a>
+    <a class="navbar-icon-btn" href="https://www.instagram.com/essentiallysports" title="Instagram" aria-label="Instagram"><img src="social-icons/nav-instagram.svg" alt=""></a>
+    <a class="navbar-icon-btn" href="https://www.youtube.com/essentiallysports" title="YouTube" aria-label="YouTube"><img src="social-icons/nav-youtube.svg" alt=""></a>
+    <a class="navbar-icon-btn" href="https://news.google.com/publications/CAAqBwgKMJqW_gwwkoGBAw" title="Google News" aria-label="Google News"><img src="social-icons/nav-google-news.svg" alt=""></a>
+  </div>
+</nav>
+
+<main class="newsletter-hub-main">
+  <section class="newsletter-hero">
+    <h1 class="newsletter-hero-title">Sign up for our best-in-class Free newsletters.</h1>
+    <p class="newsletter-hero-copy">Delivering the daily news you might have missed on your favorite sport and the stars shaping it, covering everything from locker room buzz to headline moments so you&rsquo;re always informed.</p>
+  </section>
+
+  <form class="newsletter-signup-form" novalidate>
+    <div class="newsletter-grid-wrap">
+      <ul class="newsletter-grid" role="list" aria-label="Available newsletters"></ul>
+    </div>
+
+    <div class="newsletter-form-wrap">
+      <div class="newsletter-form-fields">
+        <label class="newsletter-field">
+          <span class="sr-only">Your Name</span>
+          <input type="text" id="newsletter-name" name="name" placeholder="Your Name" autocomplete="name" required>
+        </label>
+        <label class="newsletter-field">
+          <span class="sr-only">Enter your work email</span>
+          <input type="email" id="newsletter-email" name="email" placeholder="Enter your work email" autocomplete="email" required>
+        </label>
+        <button type="submit" class="newsletter-submit">Subscribe</button>
+      </div>
+      <p class="newsletter-form-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+
+  <p class="newsletter-recaptcha-copy">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+</main>
+
+<footer class="site-footer"></footer>
+
+<script src="site-chrome.js"></script>
+<script src="site-mobile-chrome.js"></script>
+<script src="newsletter-hub.js"></script>
+</body>
+</html>
