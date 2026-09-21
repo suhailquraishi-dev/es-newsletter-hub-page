@@ -3,18 +3,13 @@
 
   const CARD_DESCRIPTION = "The Huddle delivers the day’s biggest NFL stories, on and off the field, covering rivalries, matchups, expert analysis, power rankings, and the latest insider draft news and picks.";
 
-  // Break Point has no dedicated banner yet, so it falls back to the shared
-  // The Huddle artwork (matches the Figma source, which reused that frame
-  // for every card before per-newsletter banners existed).
-  const FALLBACK_ART = 'newsletter-brand-assets/the-huddle-artwork.jpg';
-
   const NEWSLETTERS = [
-    { id: 'the-huddle', name: 'The Huddle', selected: false, art: 'newsletter-brand-assets/the-huddle-artwork.jpg' },
-    { id: 'essentially-w', name: 'Essentially W', selected: false, art: 'newsletter-brand-assets/essentially-w-artwork.jpg' },
-    { id: 'essentially-dugout', name: 'Essentially Dugout', selected: false, art: 'newsletter-brand-assets/essentially-dugout-artwork.jpg' },
+    { id: 'the-huddle', name: 'The Huddle', selected: true, art: 'newsletter-brand-assets/the-huddle-artwork.jpg' },
     { id: 'essentially-golf', name: 'Essentially Golf', selected: false, art: 'newsletter-brand-assets/essentially-golf-artwork.jpg' },
-    { id: 'lucky-dog-on-track', name: 'Lucky Dog On Track', selected: false, art: 'newsletter-brand-assets/lucky-dog-on-track-artwork.jpg' },
-    { id: 'break-point', name: 'Break Point', selected: false, art: FALLBACK_ART },
+    { id: 'essentially-dugout', name: 'Essentially Dugout', selected: true, art: 'newsletter-brand-assets/essentially-dugout-artwork.jpg' },
+    { id: 'essentially-dunk', name: 'Essentially Dunk', selected: false, art: 'newsletter-brand-assets/essentially-dunk-artwork.jpg' },
+    { id: 'essentially-w', name: 'Essentially W', selected: false, art: 'newsletter-brand-assets/essentially-w-artwork.jpg' },
+    { id: 'lucky-dog-on-track', name: 'Lucky Dog On Track', selected: true, art: 'newsletter-brand-assets/lucky-dog-on-track-artwork.jpg' },
   ];
 
   // Decorative team-ticker strip shown behind every card's artwork area in the
