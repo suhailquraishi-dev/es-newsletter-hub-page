@@ -23,6 +23,18 @@ body {
   overflow-x: hidden;
 }
 
+/*
+ * Production essentiallysports.com renders nav links with a true "Acumin Pro
+ * Condensed Black" font file. The design-tools repo only ships a Bold cut, so
+ * site-chrome.css's font-weight:900 still reads lighter than production at
+ * this size. A subtle text-stroke compensates without adding a new font file.
+ */
+.navbar-menu > a,
+.navbar-menu > .nav-dropdown > .nav-trigger {
+  -webkit-text-stroke: 0.4px currentColor;
+  text-stroke: 0.4px currentColor;
+}
+
 :root {
   --nl-page-bg: rgb(241, 244, 248);
   --nl-heading: rgb(26, 26, 26);
@@ -35,7 +47,7 @@ body {
   --nl-subscribe-bg: rgb(18, 60, 104);
   --nl-font-display: "FrameUp Acumin", "Acumin Pro Condensed Local", "Acumin Post", "Roboto Condensed", Arial, sans-serif;
   --nl-font-condensed: "Roboto Condensed", "Roboto", Arial, sans-serif;
-  --nl-font-ui: "Inter", "Roboto", Arial, sans-serif;
+  --nl-font-ui: "Roboto", Arial, sans-serif;
 }
 
 body.newsletter-hub-page {
@@ -419,7 +431,7 @@ body.newsletter-hub-page {
   margin: 14px auto 40px;
   padding: 0 24px;
   color: var(--nl-subheading);
-  font-family: Arial, sans-serif;
+  font-family: var(--nl-font-ui);
   font-size: 12px;
   line-height: 1.5;
   text-align: center;
