@@ -9,11 +9,11 @@
   const FALLBACK_ART = 'newsletter-brand-assets/the-huddle-artwork.webp';
 
   const NEWSLETTERS = [
-    { id: 'the-huddle', name: 'The Huddle', selected: true, art: 'newsletter-brand-assets/the-huddle-artwork.webp' },
+    { id: 'the-huddle', name: 'The Huddle', selected: false, art: 'newsletter-brand-assets/the-huddle-artwork.webp' },
     { id: 'essentially-w', name: 'Essentially W', selected: false, art: 'newsletter-brand-assets/essentially-w-artwork.webp' },
-    { id: 'essentially-dugout', name: 'Essentially Dugout', selected: true, art: 'newsletter-brand-assets/essentially-dugout-artwork.webp' },
+    { id: 'essentially-dugout', name: 'Essentially Dugout', selected: false, art: 'newsletter-brand-assets/essentially-dugout-artwork.webp' },
     { id: 'essentially-golf', name: 'Essentially Golf', selected: false, art: 'newsletter-brand-assets/essentially-golf-artwork.webp' },
-    { id: 'lucky-dog-on-track', name: 'Lucky Dog On Track', selected: true, art: 'newsletter-brand-assets/lucky-dog-on-track-artwork.webp' },
+    { id: 'lucky-dog-on-track', name: 'Lucky Dog On Track', selected: false, art: 'newsletter-brand-assets/lucky-dog-on-track-artwork.webp' },
     { id: 'break-point', name: 'Break Point', selected: false, art: FALLBACK_ART },
   ];
 
