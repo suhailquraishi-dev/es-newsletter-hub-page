@@ -3,18 +3,18 @@
 
   const CARD_DESCRIPTION = "The Huddle delivers the day’s biggest NFL stories, on and off the field, covering rivalries, matchups, expert analysis, power rankings, and the latest insider draft news and picks.";
 
-  // The Figma source reuses the exact same "THE HUDDLE" artwork frame for
-  // every card regardless of newsletter name (confirmed against the Figma
-  // file directly) - reproduced as-is rather than generating unique artwork.
-  const CARD_ART = 'newsletter-brand-assets/the-huddle-artwork.webp';
+  // Break Point has no dedicated banner yet, so it falls back to the shared
+  // The Huddle artwork (matches the Figma source, which reused that frame
+  // for every card before per-newsletter banners existed).
+  const FALLBACK_ART = 'newsletter-brand-assets/the-huddle-artwork.webp';
 
   const NEWSLETTERS = [
-    { id: 'the-huddle', name: 'The Huddle', selected: true, art: CARD_ART },
-    { id: 'essentially-w', name: 'Essentially W', selected: false, art: CARD_ART },
-    { id: 'essentially-dugout', name: 'Essentially Dugout', selected: true, art: CARD_ART },
-    { id: 'essentially-golf', name: 'Essentially Golf', selected: false, art: CARD_ART },
-    { id: 'lucky-dog-on-track', name: 'Lucky Dog On Track', selected: true, art: CARD_ART },
-    { id: 'break-point', name: 'Break Point', selected: false, art: CARD_ART },
+    { id: 'the-huddle', name: 'The Huddle', selected: true, art: 'newsletter-brand-assets/the-huddle-artwork.webp' },
+    { id: 'essentially-w', name: 'Essentially W', selected: false, art: 'newsletter-brand-assets/essentially-w-artwork.webp' },
+    { id: 'essentially-dugout', name: 'Essentially Dugout', selected: true, art: 'newsletter-brand-assets/essentially-dugout-artwork.webp' },
+    { id: 'essentially-golf', name: 'Essentially Golf', selected: false, art: 'newsletter-brand-assets/essentially-golf-artwork.webp' },
+    { id: 'lucky-dog-on-track', name: 'Lucky Dog On Track', selected: true, art: 'newsletter-brand-assets/lucky-dog-on-track-artwork.webp' },
+    { id: 'break-point', name: 'Break Point', selected: false, art: FALLBACK_ART },
   ];
 
   // Decorative team-ticker strip shown behind every card's artwork area in the
