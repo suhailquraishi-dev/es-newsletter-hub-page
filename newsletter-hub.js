@@ -37,8 +37,8 @@
   ];
 
   const ICON_CLOCK = '<svg viewBox="0 0 12 13" fill="none" aria-hidden="true"><circle cx="6" cy="6.5" r="5.5" stroke="currentColor"/><path d="M6 3.5v3l2 1.2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-  const ICON_PLUS = '<svg class="icon-plus" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
-  const ICON_CHECK = '<svg class="icon-check" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const ICON_PLUS = '<img class="icon-plus" src="newsletter-brand-assets/card-toggle-add.svg" alt="" aria-hidden="true">';
+  const ICON_CHECK = '<img class="icon-check" src="newsletter-brand-assets/card-toggle-check.svg" alt="" aria-hidden="true">';
 
   function tickerRowMarkup(row) {
     return row.map(([label, color]) =>

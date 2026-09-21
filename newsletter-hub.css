@@ -182,7 +182,7 @@ body.newsletter-hub-page {
 .newsletter-card-art-name {
   padding: 3px 8px;
   background: #fff;
-  color: var(--nl-card-title);
+  color: #000000;
   font-family: var(--nl-font-display);
   font-size: clamp(16px, 2.4vw, 22px);
   font-weight: 900;
@@ -243,7 +243,7 @@ body.newsletter-hub-page {
 
 .newsletter-card-title {
   margin: 0;
-  color: var(--nl-card-title);
+  color: #000000;
   font-family: var(--nl-font-display);
   font-size: 26px;
   font-weight: 900;
@@ -296,24 +296,15 @@ body.newsletter-hub-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--nl-accent-blue);
-  border-radius: 999px;
-  background: transparent;
-  transition: background-color 150ms ease;
 }
 
-.newsletter-card-toggle-circle svg {
-  width: 16px;
-  height: 16px;
-  color: var(--nl-accent-blue);
+.newsletter-card-toggle-circle img {
+  width: 33px;
+  height: 33px;
 }
 
 .newsletter-card-toggle-circle .icon-check {
   display: none;
-}
-
-.newsletter-card.is-selected .newsletter-card-toggle-circle {
-  background: var(--nl-accent-blue);
 }
 
 .newsletter-card.is-selected .newsletter-card-toggle-circle .icon-plus {
@@ -322,14 +313,13 @@ body.newsletter-hub-page {
 
 .newsletter-card.is-selected .newsletter-card-toggle-circle .icon-check {
   display: block;
-  color: #fff;
 }
 
 /* ---------- Form ---------- */
 
 .newsletter-form-wrap {
   width: 100%;
-  max-width: 1394px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 28px 24px 0;
   box-sizing: border-box;
