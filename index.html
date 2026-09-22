@@ -66,16 +66,8 @@
   </section>
 
   <form class="newsletter-signup-form" novalidate>
-    <div class="newsletter-grid-wrap">
-      <ul class="newsletter-grid" role="list" aria-label="Available newsletters"></ul>
-    </div>
-
     <div class="newsletter-form-wrap">
       <div class="newsletter-form-fields">
-        <label class="newsletter-field">
-          <span class="sr-only">Your Name</span>
-          <input type="text" id="newsletter-name" name="name" placeholder="Your Name" autocomplete="name" required>
-        </label>
         <label class="newsletter-field">
           <span class="sr-only">Enter your work email</span>
           <input type="email" id="newsletter-email" name="email" placeholder="Enter your work email" autocomplete="email" required>
@@ -83,10 +75,13 @@
         <button type="submit" class="newsletter-submit">Subscribe</button>
       </div>
       <p class="newsletter-form-status" role="status" aria-live="polite"></p>
+      <p class="newsletter-recaptcha-copy">By subscribing, you agree to our <a href="https://www.essentiallysports.com/privacy-policy/">Privacy Policy</a> and <a href="https://www.essentiallysports.com/terms-of-use/">Terms</a>.</p>
+    </div>
+
+    <div class="newsletter-grid-wrap">
+      <ul class="newsletter-grid" role="list" aria-label="Available newsletters"></ul>
     </div>
   </form>
-
-  <p class="newsletter-recaptcha-copy">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
 </main>
 
 <footer class="site-footer"></footer>
