@@ -92,6 +92,7 @@
     return `
       <span class="newsletter-card-toggle">
         <span class="newsletter-card-toggle-circle">${ICON_PLUS}${ICON_CHECK}</span>
+        <span class="newsletter-card-added-toast" role="status" aria-live="polite">Subscription Added!</span>
       </span>`;
   }
 
@@ -125,10 +126,26 @@
 
   function initCards(root) {
     root.querySelectorAll('.newsletter-card:not(.is-subscribed)').forEach(card => {
+      let showTimer = null;
+      let hideTimer = null;
+      const toast = card.querySelector('.newsletter-card-added-toast');
       card.addEventListener('click', () => {
         const nowSelected = !card.classList.contains('is-selected');
         card.classList.toggle('is-selected', nowSelected);
         card.setAttribute('aria-pressed', String(nowSelected));
+
+        if (!toast) return;
+        clearTimeout(showTimer);
+        clearTimeout(hideTimer);
+        toast.classList.remove('is-visible');
+        if (nowSelected) {
+          // Let the checkmark circle swap in on its own first, then that
+          // same circle grows into the pill a beat later.
+          showTimer = setTimeout(() => {
+            toast.classList.add('is-visible');
+            hideTimer = setTimeout(() => toast.classList.remove('is-visible'), 1700);
+          }, 350);
+        }
       });
     });
   }

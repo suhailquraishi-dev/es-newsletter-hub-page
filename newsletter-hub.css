@@ -224,6 +224,7 @@ body.newsletter-hub-page {
 /* Content area */
 
 .newsletter-card-content {
+  position: relative;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
@@ -282,6 +283,15 @@ body.newsletter-hub-page {
   letter-spacing: -0.02em;
 }
 
+/*
+ * The pill is a separate absolutely-positioned layer pinned to the exact
+ * same spot as the circle (both anchored right:0/bottom:0 at 33x33), so it
+ * reads as "the same circle extending" even though the icon (kept on top,
+ * fixed size, never distorted) and the growing pill are different elements.
+ * Using `width`/`max-width` directly on the circle itself (an in-flow flex
+ * item) doesn't transition in this layout, hence the absolute-position
+ * overlay instead.
+ */
 .newsletter-card-toggle {
   position: relative;
   align-self: flex-end;
@@ -293,6 +303,7 @@ body.newsletter-hub-page {
 
 .newsletter-card-toggle-circle {
   position: absolute;
+  z-index: 2;
   inset: 0;
   display: flex;
   align-items: center;
@@ -310,6 +321,47 @@ body.newsletter-hub-page {
 
 .newsletter-card.is-selected .newsletter-card-toggle-circle .icon-plus {
   display: none;
+}
+
+.newsletter-card-added-toast {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 33px;
+  max-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 999px;
+  /* a shade darker than card-toggle-check.svg's own circle fill (#2196F3),
+     enough to tell the pill apart from the icon sitting on top of it */
+  background: #1877D1;
+  box-shadow: 0 4px 10px rgba(24, 119, 209, .3);
+  color: #fff;
+  font-family: var(--nl-font-condensed);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-width 550ms cubic-bezier(.22, 1, .36, 1), padding 550ms cubic-bezier(.22, 1, .36, 1),
+    opacity 250ms ease;
+}
+
+.newsletter-card-added-toast.is-visible {
+  max-width: 220px;
+  /* right padding reserves room for the 33px check icon painted on top of this pill */
+  padding: 0 49px 0 26px;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .newsletter-card-added-toast {
+    transition: opacity 150ms ease;
+  }
 }
 
 .newsletter-card.is-subscribed {
@@ -393,6 +445,15 @@ body.newsletter-hub-page {
 
 .newsletter-field input::placeholder {
   color: var(--nl-placeholder);
+}
+
+.newsletter-field input:-webkit-autofill,
+.newsletter-field input:-webkit-autofill:hover,
+.newsletter-field input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--nl-card-title);
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  box-shadow: 0 0 0 1000px #fff inset;
+  transition: background-color 9999s ease-in-out 0s;
 }
 
 .newsletter-field:focus-within {
